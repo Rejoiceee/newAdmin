@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="패스_625" data-name="패스 625" d="M0,0H21V20H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="plus_1_" data-name="plus (1)" clip-path="url(#clip-path)">
+    <path id="패스_624" data-name="패스 624" d="M14.7,10a1.026,1.026,0,0,1-1.05,1h-2.1v2a1.051,1.051,0,0,1-2.1,0V11H7.35a1,1,0,1,1,0-2h2.1V7a1.051,1.051,0,0,1,2.1,0V9h2.1A1.026,1.026,0,0,1,14.7,10Zm-4.2,8a8.217,8.217,0,0,1-8.4-8,8.217,8.217,0,0,1,8.4-8,8.217,8.217,0,0,1,8.4,8A8.217,8.217,0,0,1,10.5,18Zm0-18A10.259,10.259,0,0,0,0,10,10.259,10.259,0,0,0,10.5,20,10.259,10.259,0,0,0,21,10,10.259,10.259,0,0,0,10.5,0Z" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

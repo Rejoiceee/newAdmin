@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+<script src="../assets/js/jquery-3.3.1.js"></script>
+<script src="../assets/js/ui.js"></script>
+
+<style type="text/css">
+	body {font-family:'돋움';}
+	#wrap {display: flex; flex-direction: row; height:100vh; overflow: hidden;}
+	#fileList {display:flex; flex-direction:column; flex: 1; position: relative; overflow: hidden;}
+    #header {overflow:hidden; padding:15px 15px 15px; min-height: 88px; border-bottom: 1px solid #ddd;}
+    #header h1 {float:left; padding:0; margin:0; font-size:2em; color:#666; font-family:Arial; font-weight: bold;}
+    #header .logo {float:right; padding:0; margin:0; width:200px;}
+    #header .logo img {width:100%;}
+    #depth1 ul {display:inline-block; white-space:nowrap; padding:5px 10px; margin:0; list-style:none; background:#eeeeee;}
+    #depth1 ul li {display:inline; padding:0; margin:0 10px;}
+    .stepInfo {clear:both; padding:0; margin:15px 0 5px; text-align:right;}
+    .stepInfo li {display:inline; margin-right:10px; font-size:0.9em;}
+    .stepInfo li span {display:inline-block; width:35px; height:13px; margin-right:3px; vertical-align:top;}
+	#list {position:relative; overflow: auto;}
+    .listTbl {width:100%; padding:0; margin:0; border:0; border-bottom:1px solid #e7e7e7; border-collapse:collapse;}
+    .listTbl thead th {height:26px; font-weight:normal; border:1px solid #666666; white-space:nowrap; background-color: #fff;}
+    .listTbl tbody th {height:24px; padding:0 10px; text-align:left; border:1px solid #e7e7e7; background:#eeeeee;}
+    .listTbl tbody td {position:relative; height:24px; padding:0 10px; border:1px solid #e7e7e7; border-bottom:0; color:#666666; font-size: 0.8rem; line-height: 150%;}
+    .listTbl th.depth2 {background:#fceff7; border-left:0;}
+    .listTbl td.depth2 {white-space:nowrap; text-align:left; background:#fceff7; border-top-color:#e7e7e7;}
+    .listTbl th.depth3 {background:#f2fcef;}
+    .listTbl td.depth3 {text-align:left; background:#f2fcef; border-top-color:#e7e7e7;}
+    .listTbl th.depth4 {background:#efeffc;}
+    .listTbl td.depth4 {text-align:left; background:#efeffc; border-top-color:#e7e7e7;}
+    .listTbl th.depth5 {background:#fcfcef;}
+    .listTbl td.depth5 {text-align:left; background:#fcfcef; border-top-color:#e7e7e7;}
+    .listTbl th.depth6 {background:#fff6ec;}
+    .listTbl td.depth6 {text-align:left; background:#fff6ec; border-top-color:#e7e7e7;}
+    .listTbl th.popup {background:#effafc;}
+    .listTbl td.popup {text-align:center; background:#effafc; border-top-color:#e7e7e7;}
+    .listTbl td.link {text-align:center;}
+    .listTbl td.link a {white-space:nowrap;}
+    .listTbl td.psd,
+    .listTbl td.endHtml,
+    .listTbl td.check1,
+    .listTbl td.check2,
+    .listTbl td.end,
+    .listTbl td.name {text-align:center; white-space:nowrap;}
+    .listTbl th.name,
+    .listTbl th.last,
+    .listTbl td.name {border-right:0 !important;}
+    .listTbl tr:hover td {background:#548bcc !important; color:#ffffff !important;}
+	.listTbl tr:hover a {color:#ffffff !important; border-color: #fff !important;}
+		.step.X,
+		.listTbl tr td.step.X {background:#999999 !important; color:#ffffff !important;}
+		.step.O,
+		.listTbl tr td.step.O {background:#000000 !important; color:#ffffff !important;}
+		.txtC {text-align:center;}
+    #footer {position: relative;}
+    #footer .goTop {text-align:right;}
+    #footer .goTop a {display:inline-block; padding:1px 3px; text-decoration:none; background:#666666; color:#fff;}
+    #footer .footBg {overflow:hidden; padding:10px 0 10px 10px; background:#eeeeee; border-top:1px solid #666666;}
+    #footer .progress,
+    #footer .nameList {padding:5px 0 0; margin:0;}
+    #footer .progress li,
+    #footer .nameList li {display:inline; padding:0; margin:0 10px 0 0; color:blue;}
+    #footer .nameList {display:block;}
+    #footer .tempMenu {float:right; white-space:nowrap; padding:0; margin:0; list-style:none;}
+    #footer .tempMenu li {display:inline; padding:0; margin:0 10px;}
+    #footer .info {padding:0; margin:0; list-style:none;}
+    #container {padding-bottom:150px;}
+    .ajax,
+    .listTbl tr.ajax td {background:yellow;}
+    ol {padding:0 0 0 20px; margin:10px 0;}
+	.point-blue {color:#02798F;}
+	.blank {float:right; padding:5px; border: 1px solid #666; border-radius: 15px;}
+	.link-inline {color:#02798F; text-decoration: underline; font-weight: 500;}
+</style>
+
+<script>
+    $(function(){
+      /*grid: 1Dth, 2Dth, 3Dth, 4Dth, 5Dth, Popup, 화면ID(링크), 완료, 날짜, 비고, 담당자  */
+	  grid('메인','','','','','','../../html/main/main','','2023/10/17','','김수민');
+	  grid('로그인, 회원가입','로그인','','','','','../../html/register/login','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','아이디, 비밀번호 찾기','','','','','../../html/register/find','','2023/10/19','','김수민');
+	//   grid('로그인, 회원가입','회원가입 gate','','','','','../../html/register/register_gate','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','회원가입','확인','','','','../../html/register/register_step1_check','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','회원가입','약관동의','','','','../../html/register/register_step2_terms','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','회원가입','정보입력','','','','../../html/register/register_step3_information','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','회원가입','정보입력_관리자','','','','../../html/register/register_step3_admin_information','','2023/10/19','','김수민');
+	  grid('로그인, 회원가입','','회원 정보','','','','../../html/register/register_info_modify','','2023/10/23','','김수민');
+	  grid('권한관리','','','','','','../../html/authority_manage/authority_manage','','2023/10/24','','김수민');
+	  var html;
+    	function grid(str1,str2,str3,str4,str5,str6,str7,str8,str9,str10,str11){
+			let replaced_str7 = str7.replace('../../html/', '');
+  			html += '<tr>'+
+  					'<td class="depth1"><span>'+str1+'</span></td>'+
+  					'<td class="depth2"><span>'+str2+'</span></td>'+
+  					'<td class="depth3"><span>'+str3+'</span></td>'+
+  					'<td class="depth4"><span>'+str4+'</span></td>'+
+  					'<td class="depth5"><span>'+str5+'</span></td>'+
+  					'<td class="popup txtC"><span>'+str6+'</span></td>'+
+					'<td><span><a href="./html/'+str7+'.html" target="_blank" class="link-inline">'+replaced_str7+'</a></span></td>'+
+  					'<td class="endHtml step '+ str8 + ' txtC"><span>'+str8+'</span></td>'+
+  					'<td class="txtC"><span>'+str9+'</span></td>'+
+  					'<td class="txtC"><span>'+str10+'</span></td>'+
+  					'<td class="txtC"><span>'+str11+'</span></td>'+
+  					'</tr>';
+
+  			$('#gridCell').html(html);
+    	}
+
+		var total = $($('.depth2')).length - 1; /* 총 갯수 */
+		$('.numTotal .tat').append(total);
+
+		var endHtml = $($('.endHtml.step.O')).length; /* html 완료 */
+		$('.numHtml span').append(endHtml);
+
+		var aa = endHtml
+		$('.numTotal .end').append(aa);
+
+		var end = $($('.end.step2')).length; /* 완료 */
+		$('.numEnd span').append(end);
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="fileList">
+			<!-- header -->
+			<div id="header">
+				<h1>WEB PUBLISHING GUIDE - <span class="point-blue">H&A 구독 제휴사 Admin</span></h1>
+				<p class="logo"><img src="logo.png" alt="" /></p>
+				<!-- <ul class="stepInfo">
+					<li><span class="step X"></span>진행중</li>
+					<li><span class="step O"></span>완료</li>
+				</ul> -->
+			</div>
+			<!-- //header -->
+			<div id="list">
+				<table class="page-list listTbl">
+					<thead>
+						<tr>
+							<th scope="col" class="depth1">1 Depth</th>
+							<th scope="col" class="depth2">2 Depth</th>
+							<th scope="col" class="depth3">3 Depth</th>
+							<th scope="col" class="depth4">4 Depth</th>
+							<th scope="col" class="depth5">5 Depth</th>
+							<th scope="col" class="popup txtC">popup</th>
+							<th scope="col">화면ID(링크)</th>
+							<th scope="col"></th>
+							<th scope="col">날짜</th>
+							<th scope="col">비고</th>
+							<th scope="col" class="name">담당자</th>
+						</tr>
+					</thead>
+					<tbody id="gridCell">
+					</tbody>
+				</table>
+			</div>
+			<!-- footer -->
+			<div id="footer">
+				<!-- <div class="goTop"><a href="#header">Top</a></div> -->
+				<div class="footBg">
+					<ul class="tempMenu">
+						<li><a href="./style.html" target="_blank">styleGuide</a></li>
+					</ul>
+					<ul class="info">
+						<li>프로젝트명: H&A 구독 제휴사 Admin</li>
+						<li>인코딩: utf-8</li>
+					</ul>
+					<!-- <ul class="progress">
+						<li class="numHtml">HTML:<span></span></li>
+						<li class="numTotal">total:<span class="tat" style="color:red;"></span>페이지 중 <span class="end" style="color:red;"></span>페이지 완료</li>
+					</ul> -->
+				</div>
+			</div>
+			<!-- //footer -->
+		</div>
+	</div>
+
+</body>
+</html>

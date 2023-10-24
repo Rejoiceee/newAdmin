@@ -1,0 +1,89 @@
+.pagination {
+    display:flex;
+    align-items: center;
+    .nav {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:32px;
+        height:32px;
+        border:1px solid $color-border;
+        border-radius:4px;
+        background:$color-white;
+        font-size:0;
+        color:transparent;
+        &:after {
+            content:'';
+            display:block;
+            width:14px;
+            height:12px;
+        }
+        &.first {
+            margin-right:6px;
+            &:after {
+                transform:rotate(180deg);
+                background:url('../img/arr_pagination2.svg') no-repeat 50% 50%;
+            }
+        }
+        &.prev {
+            &:after {
+                transform:rotate(180deg);
+                background:url('../img/arr_pagination.svg') no-repeat 50% 50%;
+            }
+        }
+        &.next {
+            &:after {
+                background:url('../img/arr_pagination.svg') no-repeat 50% 50%;
+            }
+        }
+        &.last {
+            margin-left:6px;
+            &:after {
+                background:url('../img/arr_pagination2.svg') no-repeat 50% 50%;
+            }
+        }
+        &:disabled {
+            background:#F4F4F4;
+            &:after {
+                opacity:0.2;
+            }
+        }
+    }
+    .order {
+        display:flex;
+        align-items:center;
+        list-style:none;
+        margin:0 12px;
+        li {
+            margin:0 12px;
+            button {
+                font-size:$font-small;
+            }
+            &.on {
+                button {
+                    font-weight:$font-weight-bold;
+                }
+            }
+        }
+    }
+}
+
+.indicator {
+    ol {
+        display:flex;
+        list-style:none;
+        li {
+            font-size:0;
+            color:transparent;
+            width:6px;
+            height:6px;
+            margin:0 5px;
+            border-radius:3px;
+            background:$color-bg-3;
+            &.on {
+                width:24px;
+                background:$color-default;
+            }
+        }
+    }
+}

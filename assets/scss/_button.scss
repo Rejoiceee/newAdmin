@@ -1,0 +1,210 @@
+.btn {
+    &.btn01 {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-width:180px;
+        height:48px;
+        border-radius:8px;
+        text-align:center;
+        font-size:$font-small;
+        &.type01 {
+            background:$color-default;
+            color:$color-white;
+        }
+        &.type02 {
+            background:$color-primary;
+            color:$color-white;
+        }
+        &.type03 {
+            min-width:auto;
+            padding:0 14px;
+            background:#555;
+            color:$color-white;
+        }
+        &.type04 {
+            min-width:60px;
+            height:32px;
+            padding:0 10px;
+            background:#363636;
+            color:$color-white;
+        }
+        &:disabled {
+            background:$color-bg-2;
+            color:$color-white;
+            cursor:default;
+        }
+    }
+
+    &.btn02 {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        height:32px;
+        padding:0 24px;
+        border-radius:8px;
+        background:$color-white;
+        color:$color-default;
+        &.type01 {
+            border:1px solid #555;
+        }
+        &.type02 {
+            padding:0 12px;
+            border:1px solid #2E7D32;
+            color:#2E7D32;
+        }
+        &.type03 {
+            padding:0 12px;
+            border:1px solid #555;
+            color:$color-default;
+        }
+        &.type04 {
+            padding:0 12px;
+            border:1px solid #555;
+            color:$color-default;
+        }
+        .ico_excel {
+            display:inline-block;
+            width:16px;
+            height:15px;
+            margin-right:4px;
+            vertical-align:middle;
+            background:url('../img/ico_excel.svg') no-repeat;
+        }
+        .ico_upload {
+            display:inline-block;
+            width:14px;
+            height:16px;
+            margin-right:4px;
+            vertical-align:middle;
+            background:url('../img/ico_upload.svg') no-repeat;
+        }
+        .ico_download {
+            display:inline-block;
+            width:14px;
+            height:16px;
+            margin-right:4px;
+            vertical-align:middle;
+            background:url('../img/ico_download.svg') no-repeat;
+        }
+    }
+
+    &.btn03 {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        height:32px;
+        padding:0 12px;
+        border-radius:16px;
+        &.type01 {
+            background:#363636;
+            color:$color-white;
+        }
+        &.type02 {
+            background:$color-primary;
+            color:$color-white;
+        }
+    }
+    &.btn04 { //테이블 삽입용
+        //min-width:76px;
+        height:43px;
+        padding:0 12px;
+        border-radius:8px;
+        font-size:$font-medium;
+        font-weight:$font-weight-bold;
+        white-space:nowrap;
+        &.type01 {
+            border:1px solid $color-default;
+        }
+    }
+}
+.ico_act {
+    display:inline-block;
+    width:12px;
+    height:12px;
+    margin-right:6px;
+    border-radius:50%;
+    &.type01 {
+        background:$color-act-1;
+    }
+    &.type02 {
+        background:$color-act-2;
+    }
+    &.type03 {
+        background:$color-act-3;
+    }
+    &.type04 {
+        background:$color-act-4;
+    }
+}
+.btn_txt01 {
+    display:inline-block;
+    padding-right:29px;
+    background:url('../img/arr_right.svg') no-repeat 100% 50%;
+    font-size:$font-medium;
+}
+.btn_txt02 {
+    display:inline-block;
+    padding-right:29px;
+    background:url('../img/ico_add.svg') no-repeat 100% 50%;
+    font-size:$font-medium;
+}
+.btn_txt03 {
+    display:inline-block;
+    padding-right:26px;
+    background:url('../img/ico_plus.svg') no-repeat 100% 50%;
+    font-size:$font-medium;
+}
+.btn_txt04 {
+    display:inline-block;
+    text-decoration:underline;
+}
+
+.btn_container {
+    display:flex;
+    margin-top:36px;
+    .btn {
+        flex:1;
+    }
+}
+.btn_container2 {
+    display:flex;
+    gap:20px;
+    margin-top:36px;
+    .btn {
+        flex:0.5;
+        & + .btn {
+            flex:1.5;
+        }
+    }
+}
+.btn_container3 {
+    display:flex;
+    gap:20px;
+    margin-top:36px;
+    .btn {
+        min-width:170px !important;
+        width:100%;
+    }
+}
+.btn_container4 {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    text-align:center;
+    margin-top:36px;
+    .btn {
+        width:180px;
+    }
+}
+.btn_container5 {
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    text-align:center;
+    margin-top:32px;
+    .btn {
+        flex:1 0 auto;
+        width:180px;
+    }
+}

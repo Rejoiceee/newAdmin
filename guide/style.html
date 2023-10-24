@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+    <script src="../assets/js/jquery-3.3.1.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="mb20"><button type="button" class="btn btn01 type01">다음 단계로 이동</button></div>
+    <div class="mb20"><button type="button" class="btn btn01 type02">다음 단계로 이동</button></div>
+    <div class="mb20"><button type="button" class="btn btn01 type02" disabled>다음 단계로 이동</button></div>
+    <div class="mb20"><button type="button" class="btn btn01 type03">검색 조건 변경</button></div>
+    <div class="mb20"><button type="button" class="btn btn01 type04">삭제</button></div>
+
+    <div class="mb20"><button type="button" class="btn btn02 type01">파일 선택</button></div>
+    <div class="mb20"><button type="button" class="btn btn02 type02"><i class="ico_excel"></i>검색 결과 다운로드</button></div>
+    <div class="mb20"><button type="button" class="btn btn02 type03"><i class="ico_upload"></i>운송장 일괄 업로드</button></div>
+    <div class="mb20"><button type="button" class="btn btn02 type04"><i class="ico_download"></i>내보내기</button></div>
+    
+    <div class="mb20"><button type="button" class="btn btn03 type01">재 배송</button></div>
+    <div class="mb20"><button type="button" class="btn btn03 type01"><i class="ico_act type01"></i>배송 완료 승인 요청</button></div>
+    <div class="mb20"><button type="button" class="btn btn03 type02">.btn.btn03.type02 height32</button></div>
+    <div class="mb20"><button type="button" class="btn btn03 type03">.btn.btn03.type02 height32</button></div>
+
+    <div>
+        <a href="javascript:;" class="btn_txt01">버튼</a>
+        <a href="javascript:;" class="btn_txt02">버튼</a>
+        <a href="javascript:;" class="btn_txt03">버튼</a>
+        <a href="javascript:;" class="btn_txt04">버튼</a>
+    </div>
+
+    <div class="mb20">
+        <div class="tabMenu tabMenu01 type01">
+            <div class="list">
+                <ul>
+                    <li class="on"><a href="#tab1" class="btn">Tab Button1</a></li>
+                    <li><a href="#tab2" class="btn">Tab Button2</a></li>
+                    <li><a href="#tab3" class="btn">Tab Button3</a></li>
+                </ul>
+            </div>
+            
+            <div class="cont_area">
+                <div id="tab1" class="cont" style="display:block;">
+                    Tab Content1
+                </div>
+                <div id="tab2" class="cont">
+                    Tab Content2
+                </div>
+                <div id="tab3" class="cont">
+                    Tab Content3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="tabMenu tabMenu01 type02">
+            <div class="list">
+                <ul>
+                    <li class="on"><a href="#tab1" class="btn"><span>Tab Button1</span></a></li>
+                    <li><a href="#tab2" class="btn"><span>Tab Button2</span></a></li>
+                    <li><a href="#tab3" class="btn"><span>Tab Button3</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="cont_area">
+                <div id="tab1" class="cont" style="display:block;">
+                    Tab Content1
+                </div>
+                <div id="tab2" class="cont">
+                    Tab Content2
+                </div>
+                <div id="tab3" class="cont">
+                    Tab Content3
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mb20">
+        <div class="tabMenu tabMenu02">
+            <div class="list">
+                <ul>
+                    <li class="on"><a href="#tab1" class="btn"><span>Tab Button1</span></a></li>
+                    <li><a href="#tab2" class="btn"><span>Tab Button2</span></a></li>
+                    <li><a href="#tab3" class="btn"><span>Tab Button3</span></a></li>
+                </ul>
+            </div>
+            
+            <div class="cont_area">
+                <div id="tab1" class="cont" style="display:block;">
+                    Tab Content1
+                </div>
+                <div id="tab2" class="cont">
+                    Tab Content2
+                </div>
+                <div id="tab3" class="cont">
+                    Tab Content3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="input_check">
+            <input type="checkbox" name="" id="check1">
+            <label for="check1"><span>Select controls Checkbox</span></label>
+        </div>
+        <div class="input_check">
+            <input type="checkbox" name="" id="check2" checked>
+            <label for="check2"><span>Select controls Checkbox</span></label>
+        </div>
+        <div class="input_check">
+            <input type="checkbox" name="" id="check3" disabled>
+            <label for="check3"><span>Select controls Checkbox</span></label>
+        </div>
+
+        <div class="input_check reverse">
+            <input type="checkbox" name="" id="check1">
+            <label for="check1"><span>Select controls Checkbox</span></label>
+        </div>
+        <div class="input_check reverse">
+            <input type="checkbox" name="" id="check2" checked>
+            <label for="check2"><span>Select controls Checkbox</span></label>
+        </div>
+        <div class="input_check reverse">
+            <input type="checkbox" name="" id="check3" disabled>
+            <label for="check3"><span>Select controls Checkbox</span></label>
+        </div>
+
+        <div class="input_radio">
+            <input type="radio" name="" id="radio1">
+            <label for="radio1"><span>Select controls radio</span></label>
+        </div>
+        <div class="input_radio">
+            <input type="radio" name="" id="radio2" checked>
+            <label for="radio2"><span>Select controls radio</span></label>
+        </div>
+        <div class="input_radio">
+            <input type="radio" name="" id="radio3" disabled>
+            <label for="radio3"><span>Select controls radio</span></label>
+        </div>
+
+        <div class="toggleBox">
+            <input type="checkbox" name="" id="toggle">
+            <label for="toggle"><span>Select controls toggleBox</span></label>
+        </div>
+        <div class="toggleBox">
+            <input type="checkbox" name="" id="toggle2" disabled>
+            <label for="toggle2"><span>Select controls toggleBox</span></label>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="input_text"><input type="text" name="" id="" placeholder="text"></div>
+        <div class="input_text"><input type="text" name="" id="" value="text" readonly></div>
+
+        <div class="input_text type02"><input type="text" name="" id="" placeholder="text"></div>
+        <div class="input_text type02"><input type="text" name="" id="" value="text" readonly></div>
+
+        <div class="input_text has-byte">
+            <input type="text" name="" id="" placeholder="text">
+            <div class="byte">0/100 Bytes</div>
+        </div>
+        <div class="input_text"><input type="text" name="" id="" value="text" readonly></div>
+
+        <div class="input_textarea has-byte">
+            <textarea name="" id="" cols="30" rows="10" placeholder="text"></textarea>
+            <div class="byte">0/100 Bytes</div>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="selectbox type01">
+            <button class="label">select</button>
+            <ul class="optionList">
+                <li class="optionItem">select1</li>
+                <li class="optionItem">select2</li>
+                <li class="optionItem">select3</li>
+                <li class="optionItem">select4</li>
+            </ul>
+        </div>
+
+        <div class="selectbox type02">
+            <span class="ico ico_user"></span>
+            <button class="label">select2</button>
+            <ul class="optionList">
+                <li class="optionItem">select1</li>
+                <li class="optionItem">select2</li>
+                <li class="optionItem">select3</li>
+                <li class="optionItem">select4</li>
+            </ul>
+        </div>
+
+        <div class="selectbox type03">
+            <button class="label">select3</button>
+            <ul class="optionList">
+                <li class="optionItem">select1</li>
+                <li class="optionItem">select2</li>
+                <li class="optionItem">select3</li>
+                <li class="optionItem">select4</li>
+            </ul>
+        </div>
+
+        <div class="selectbox type04">
+            <button class="label">select3</button>
+            <ul class="optionList">
+                <li class="optionItem">select1</li>
+                <li class="optionItem">select2</li>
+                <li class="optionItem">select3</li>
+                <li class="optionItem">select4</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="select_date">
+            <ul class="period">
+                <li><button type="button" class="btn">1주일</button></li>
+                <li class="on"><button type="button" class="btn">1개월</button></li>
+                <li><button type="button" class="btn">2개월</button></li>
+                <li><button type="button" class="btn">3개월</button></li>
+            </ul>
+            <div class="date">
+                <div class="input_text"><input type="text" name="" id=""></div>
+                <button type="button" class="datepick"></button>
+                <span class="dash">-</span>
+                <div class="input_text"><input type="text" name="" id=""></div>
+                <button type="button" class="datepick"></button>
+            </div>
+        </div>
+
+        <div class="select_date">
+            <div class="date">
+                <div class="input_text"><input type="text" name="" id=""></div>
+                <button type="button" class="datepick"></button>
+                <span class="dash">-</span>
+                <div class="input_text"><input type="text" name="" id=""></div>
+                <button type="button" class="datepick"></button>
+            </div>
+            <div class="input_wrap">
+                <div class="input_radio">
+                    <input type="radio" name="" id="radio1">
+                    <label for="radio1"><span>오늘</span></label>
+                </div>
+                <div class="input_radio">
+                    <input type="radio" name="" id="radio1">
+                    <label for="radio1"><span>일주일</span></label>
+                </div>
+                <div class="input_radio">
+                    <input type="radio" name="" id="radio1">
+                    <label for="radio1"><span>1개월</span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb20">
+        <div class="pagination">
+            <button type="button" class="nav first">처음</button>
+            <button type="button" class="nav prev">이전</button>
+            <ol class="order">
+                <li><button type="button">1</button></li>
+                <li><button type="button">2</button></li>
+                <li class="on"><button type="button">3</button></li>
+                <li><button type="button">4</button></li>
+                <li><button type="button">5</button></li>
+                <li><button type="button">6</button></li>
+                <li><button type="button">7</button></li>
+                <li><button type="button">8</button></li>
+                <li><button type="button">9</button></li>
+                <li><button type="button">10</button></li>
+            </ol>
+            <button type="button" class="nav next">다음</button>
+            <button type="button" class="nav last">마지막</button>
+        </div>
+        <div class="indicator">
+            <ol>
+                <li>1</li>
+                <li class="on">2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+        </div>
+    </div>
+
+    <div>
+        <div class="mb20"><button type="button" class="btn btn02 type01" onclick="popup('alert1');">alert</button></div>
+        <div class="mb20"><button type="button" class="btn btn02 type01" onclick="popup('popup1');">팝업</button></div>
+
+        <div class="layerPopupWrap" id="alert1">
+            <div class="dimmed"></div>
+            <div class="layerPopup">
+                <div class="alert">
+                    <strong class="alert_title">팝업타이틀</strong>
+                    <div class="alert_body">alert 내용</div>
+                    <div class="btn_container">
+                        <button type="button" class="btn btn01 type02" onclick="popupclose(this);">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layerPopupWrap" id="popup1">
+            <div class="dimmed"></div>
+            <div class="layerPopup">
+                <div class="popup">
+                    <strong class="popup_title">팝업타이틀 <button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                    <div class="popup_body">popup 내용</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../assets/js/ui.js"></script>
+    <script>
+        function popup(obj){
+            $('#'+obj).show();
+        }
+        function popupclose(obj){
+            $(obj).parents('.layerPopupWrap').hide();
+        }
+    </script>
+</body>
+</html>

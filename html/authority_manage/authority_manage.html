@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제휴사 Admin</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="wrap" class="bg-color-grey01">
+        <!-- header -->
+        <div id="header" class="bg-color-grey01">
+            <header class="header">
+                <h1 class="logo"><a href="javascript:;"><img src="../../assets/img/logo.svg" alt="LG">제휴사 Admin</a></h1>
+            
+                <!-- GNB -->
+                <div class="gnb">
+                    <ul class="gnb_space">
+                        <li class="depth1 on">
+                            <a href="javascript:;" class="depth1_menu">상품관리</a>
+                            <ul class="depth2_wrap">
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">상품 등록</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">상품 조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="javascript:;" class="depth1_menu">배송관리</a>
+                            <ul class="depth2_wrap">
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">주문 배송 처리</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">알림 등록/결과 관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="javascript:;" class="depth1_menu">쿠폰관리</a>
+                            <ul class="depth2_wrap">
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">쿠폰 생성 등록</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">쿠폰 발행/등록/사용완료</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">쿠폰 알림</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="javascript:;" class="depth1_menu">환불관리</a>
+                            <ul class="depth2_wrap">
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">장기 미사용 쿠폰 환불</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">제휴사 요청 환불</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">고객 요청 환불</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">제휴사/고객 환불 조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth1">
+                            <a href="javascript:;" class="depth1_menu">정산관리</a>
+                            <ul class="depth2_wrap">
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">업체별 매출 조정 및 확정</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">업체별 거래액 송부 및 세금계산서</a></li>
+                                <li class="depth2"><a href="javascript:;" class="depth2_menu">업체별 현황 데이터 조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //GNB -->
+            
+            
+                
+                <!-- 사용자선택 -->
+                <div class="select_user">
+                    <!-- 정산현황 -->
+                    <div class="adjustment_notice">
+                        <span class="badge">정산 마감 NN일 전</span>
+                    </div>
+                    <!-- //정산현황 -->
+            
+                    <div class="selectbox type02">
+                        <span class="ico ico_user"></span>
+                        <button class="label">select2</button>
+                        <ul class="optionList">
+                            <li class="optionItem">select1</li>
+                            <li class="optionItem">select2</li>
+                            <li class="optionItem">select3</li>
+                            <li class="optionItem">select4</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //사용자선택 -->
+            
+                <!-- 제휴사 -->
+                <div class="selectbox type03 partner">
+                    <button class="label">select3</button>
+                    <ul class="optionList">
+                        <li class="optionItem">select1</li>
+                        <li class="optionItem">select2</li>
+                        <li class="optionItem">select3</li>
+                        <li class="optionItem">select4</li>
+                    </ul>
+                </div>
+                <!-- //제휴사 -->
+            </header>
+        </div>
+        <!-- //header -->
+
+        <div id="container">
+            <div class="contents">
+                <!-- breadcrumbs -->
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">권한관리</a></li>
+                        <li><a href="">계정 관리 (제휴사)</a></li>
+                    </ul>
+                </div>
+                <!-- //breadcrumbs -->
+
+                <h2 class="pageTitle">권한관리</h2>
+
+                <div class="tabMenu tabMenu01 type01 mt20">
+                    <!-- 텝메뉴 버튼 -->
+                    <div class="list">
+                        <ul>
+                            <li class="on"><a href="#tab1" class="btn">계정 관리 (제휴사)</a></li>
+                            <li><a href="#tab2" class="btn">계정 관리 (LGE)</a></li>
+                            <li><a href="#tab3" class="btn">계정 권한 관리</a></li>
+                        </ul>
+                    </div>
+                    <!-- //텝메뉴 버튼 -->
+                    
+                    <!-- 텝메뉴 컨텐츠 -->
+                    <div class="cont_area">
+
+                        <!-- 텝메뉴 컨텐츠 1 -->
+                        <div id="tab1" class="cont" style="display:block;">
+                            <!-- 검색 옵션 -->
+                            <div class="searchOptionArea">
+                                <div class="innerBox date">
+                                    <strong class="title">조회 기간</strong>
+                                    <div class="select_date">
+                                        <div class="date">
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                            <span class="dash">-</span>
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="innerBox status">
+                                    <strong class="title">승인 상태</strong>
+                                    <div class="selectbox type01">
+                                        <button class="label">전체</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">전체</li>
+                                            <li class="optionItem">승인</li>
+                                            <li class="optionItem">거절</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="innerBox option_detail">
+                                    <strong class="title">상세 조건</strong>
+                                    <div class="inputWrap">
+                                        <div class="input_text"><input type="text" name="" id="" placeholder="사업자명, 아이디, 담당자명"></div>
+                                        <button type="button" class="btn btn01 type03">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //검색 옵션 -->
+
+                            <div class="table_header">
+                                <div class="box_left">
+                                    <div class="total_count"><span>7</span> Items</div>
+                                    <div class="selectbox type05">
+                                        <button class="label">100</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">select1</li>
+                                            <li class="optionItem">select2</li>
+                                            <li class="optionItem">select3</li>
+                                            <li class="optionItem">select4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dataTable01">
+                                <table>
+                                    <colgroup>
+                                        <col><col><col><col><col><col><col><col><col><col><col><col><col><col style="width:10%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>아이디</th>
+                                            <th>사업자명</th>
+                                            <th>사업자번호</th>
+                                            <th>담당자명</th>
+                                            <th>휴대전화</th>
+                                            <th>이메일</th>
+                                            <th>사업자등록증</th>
+                                            <th>통신판매</th>
+                                            <th>가입일자</th>
+                                            <th>승인일자</th>
+                                            <th>상태</th>
+                                            <th>삭제</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인 대기</button></td>
+                                            <td><button type="button" class="btn btn01 type04" disabled>삭제</button></td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인</button></td>
+                                            <td><button type="button" class="btn btn01 type04">삭제</button></td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인</button></td>
+                                            <td><button type="button" class="btn btn01 type04">삭제</button></td>
+                                            <td>연락처 오기재 연락처 오기재 연락처 오기재</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table_footer">
+                                <div class="pagination">
+                                    <button type="button" disabled class="nav first">처음</button>
+                                    <button type="button" disabled class="nav prev">이전</button>
+                                    <ol class="order">
+                                        <li class="on"><button type="button">1</button></li>
+                                        <li><button type="button">2</button></li>
+                                        <li><button type="button">3</button></li>
+                                        <li><button type="button">4</button></li>
+                                        <li><button type="button">5</button></li>
+                                    </ol>
+                                    <button type="button" class="nav next">다음</button>
+                                    <button type="button" class="nav last">마지막</button>
+                                </div>
+
+                                <button type="button" class="btn btn02 type04"><i class="ico_download"></i>내보내기</button>
+                            </div>
+                        </div>
+                        <!-- //텝메뉴 컨텐츠 1 -->
+
+                        <!-- 텝메뉴 컨텐츠 2 -->
+                        <div id="tab2" class="cont">
+                            <!-- 검색 옵션 -->
+                            <div class="searchOptionArea">
+                                <div class="innerBox date">
+                                    <strong class="title">조회 기간</strong>
+                                    <div class="select_date">
+                                        <div class="date">
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                            <span class="dash">-</span>
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="innerBox status">
+                                    <strong class="title">승인 상태</strong>
+                                    <div class="selectbox type01">
+                                        <button class="label">전체</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">전체</li>
+                                            <li class="optionItem">승인</li>
+                                            <li class="optionItem">거절</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="innerBox option_detail">
+                                    <strong class="title">상세 조건</strong>
+                                    <div class="inputWrap">
+                                        <div class="input_text"><input type="text" name="" id="" placeholder="사업자명, 아이디, 담당자명"></div>
+                                        <button type="button" class="btn btn01 type03">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //검색 옵션 -->
+
+                            <div class="table_header">
+                                <div class="box_left">
+                                    <div class="total_count"><span>7</span> Items</div>
+                                    <div class="selectbox type05">
+                                        <button class="label">100</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">select1</li>
+                                            <li class="optionItem">select2</li>
+                                            <li class="optionItem">select3</li>
+                                            <li class="optionItem">select4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box_right">
+                                    <button type="button" class="btn btn03 type02">등록</button>
+                                </div>
+                            </div>
+
+                            <div class="dataTable01">
+                                <table>
+                                    <colgroup>
+                                        <col><col><col><col><col><col><col><col><col><col><col><col><col><col style="width:10%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>아이디</th>
+                                            <th>사업자명</th>
+                                            <th>사업자번호</th>
+                                            <th>담당자명</th>
+                                            <th>휴대전화</th>
+                                            <th>이메일</th>
+                                            <th>사업자등록증</th>
+                                            <th>통신판매</th>
+                                            <th>가입일자</th>
+                                            <th>승인일자</th>
+                                            <th>상태</th>
+                                            <th>삭제</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인 대기</button></td>
+                                            <td><button type="button" class="btn btn01 type04" disabled>삭제</button></td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인</button></td>
+                                            <td><button type="button" class="btn btn01 type04">삭제</button></td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><button type="button" class="btn_txt04">User555 (마스터)</button></td>
+                                            <td>런드리고</td>
+                                            <td>248-81-24867</td>
+                                            <td>홍길동</td>
+                                            <td>010-1234-5678</td>
+                                            <td>555@abc.com</td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>
+                                                <a href="">image.png</a>
+                                            </td>
+                                            <td>2023-08-24</td>
+                                            <td>2023-08-25</td>
+                                            <td><button type="button" class="btn btn01 type04">승인</button></td>
+                                            <td><button type="button" class="btn btn01 type04">삭제</button></td>
+                                            <td>연락처 오기재 연락처 오기재 연락처 오기재</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table_footer">
+                                <div class="pagination">
+                                    <button type="button" disabled class="nav first">처음</button>
+                                    <button type="button" disabled class="nav prev">이전</button>
+                                    <ol class="order">
+                                        <li class="on"><button type="button">1</button></li>
+                                        <li><button type="button">2</button></li>
+                                        <li><button type="button">3</button></li>
+                                        <li><b type="button">4</b        utton></li>
+                                        <li><button type="button">5</button></li>
+                                    </ol>
+                                    <button type="button" class="nav next">다음</button>
+                                    <button type="button" class="nav last">마지막</button>
+                                </div>
+
+                                <button type="button" class="btn btn02 type04"><i class="ico_download"></i>내보내기</button>
+                            </div>
+                        </div>
+                        <!-- //텝메뉴 컨텐츠 3 -->
+
+                        <!-- 텝메뉴 컨텐츠 3 -->
+                        <div id="tab3" class="cont">
+                            <!-- 검색 옵션 -->
+                            <div class="searchOptionArea">
+                                <div class="innerBox date">
+                                    <strong class="title">조회 기간</strong>
+                                    <div class="select_date">
+                                        <div class="date">
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                            <span class="dash">-</span>
+                                            <div class="input_text"><input type="text" name="" id=""></div>
+                                            <button type="button" class="datepick"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="innerBox status">
+                                    <strong class="title">승인 상태</strong>
+                                    <div class="selectbox type01">
+                                        <button class="label">전체</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">전체</li>
+                                            <li class="optionItem">승인</li>
+                                            <li class="optionItem">거절</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="innerBox option_detail">
+                                    <strong class="title">상세 조건</strong>
+                                    <div class="inputWrap">
+                                        <div class="input_text"><input type="text" name="" id="" placeholder="사업자명, 아이디, 담당자명"></div>
+                                        <button type="button" class="btn btn01 type03">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //검색 옵션 -->
+
+                            <div class="table_header">
+                                <div class="box_left">
+                                    <div class="total_count"><span>7</span> Items</div>
+                                    <div class="selectbox type05">
+                                        <button class="label">100</button>
+                                        <ul class="optionList">
+                                            <li class="optionItem">select1</li>
+                                            <li class="optionItem">select2</li>
+                                            <li class="optionItem">select3</li>
+                                            <li class="optionItem">select4</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dataTable01 type02">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:45px;">
+                                        <col style="width:125px;">
+                                        <col style="width:90px;">
+                                        <col style="width:90px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:120px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:120px;">
+                                        <col style="width:100px;">
+                                        <col style="width:90px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">No</th>
+                                            <th rowspan="2">가입일자</th>
+                                            <th rowspan="2">아이디</th>
+                                            <th rowspan="2">Level</th>
+                                            <th colspan="2" class="bdl">상품관리</th>
+                                            <th colspan="2" class="bdl">배송관리</th>
+                                            <th colspan="3" class="bdl">쿠폰관리</th>
+                                            <th colspan="5" class="bdl">환불관리</th>
+                                            <th colspan="3" class="bdl">정산관리</th>
+                                            <th rowspan="2" class="bdl">권한 수정</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="bdl">상품등록</th>
+                                            <th class="bdl">상품조회</th>
+                                            <th class="bdl">주문 배송처리</th>
+                                            <th class="bdl">알람 등록/결과관리</th>
+                                            <th class="bdl">쿠폰 생성 등록</th>
+                                            <th class="bdl">쿠폰발생/등록/사용완료</th>
+                                            <th class="bdl">쿠폰 발행 알림</th>
+                                            <th class="bdl">장기 미사용 쿠폰 환불</th>
+                                            <th class="bdl">제휴사 요청 환불</th>
+                                            <th class="bdl">고객 요청 환불</th>
+                                            <th class="bdl">제휴사/고객 환불 조회</th>
+                                            <th class="bdl">환불알림</th>
+                                            <th class="bdl">업체별 매출 조정 및 확정</th>
+                                            <th class="bdl">업체별 거래액 송부 및 세금 계산서</th>
+                                            <th class="bdl">업체별 채권 회수 현황</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">1</td>
+                                            <td rowspan="2">2022-08-23</td>
+                                            <td rowspan="2">admin4</td>
+                                            <td rowspan="2">Level3</td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Read</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl" rowspan="2">
+                                                <button type="button" class="btn btn01 type04">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                            <td class="bdl">
+                                                <div class="input_check reverse">
+                                                    <input type="checkbox" name="" id="check1" checked>
+                                                    <label for="check1"><span>Write</span></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 텝메뉴 컨텐츠 3 -->
+                    </div>
+                    <!-- 텝메뉴 컨텐츠 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footer">
+            <footer class="footer">
+                Copyright © LG Electronics. All Rights Reserved.
+            </footer>
+            
+            <div class="quickMenu">
+                <ul>
+                    <li><a href="javascript:;" class="q_menu menu1">TOP</a></li>
+                    <li><a href="javascript:;" class="q_menu menu2">권한관리</a></li>
+                    <li><a href="javascript:;" class="q_menu menu3">알림</a></li>
+                    <li><a href="javascript:;" class="q_menu menu4">내정보</a></li>
+                    <li><a href="javascript:;" class="q_menu menu5">더보기</a></li>
+                </ul>
+                <div class="goLGE">
+                    <a href="javascript:;">LGE</a>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+
+    <!-- 팝업 확인 (개발 사용 X) -->
+    <div class="checkPopup" style="position:fixed; left:0; bottom:0; z-index:10; padding:20px;;">
+        <button type="button" class="btn btn02 type01" onclick="popup('popup1');">계정 승인</button>
+        <button type="button" class="btn btn02 type01" onclick="popup('popup2');">계정 승인/거절</button>
+        <button type="button" class="btn btn02 type01" onclick="popup('popup3');">계정 삭제</button>
+        <button type="button" class="btn btn02 type01" onclick="popup('popup4');">계정 등록</button>
+        <button type="button" class="btn btn02 type01" onclick="popup('popup5');">계정 삭제2</button>
+    </div>
+    <!-- //팝업 확인 (개발 사용 X) -->
+
+    <!-- 팝업 -->
+    <div class="layerPopupWrap" id="popup1">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="popup">
+                <strong class="popup_title">계정 승인<button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                <div class="popup_body">
+                    <div class="in_popup_input_table">
+                        <table class="input_table">
+                            <tr>
+                                <th>승인 상태</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="승인 대기" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>코멘트</th>
+                                <td>
+                                    <div class="input_textarea">
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <div class="byte">
+                                            0 / 2,000 Bytes
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn_container5">
+                            <a href="javascript:;" class="btn btn01 type03" onclick="popupclose(this);">취소</a>
+                            <a href="javascript:;" class="btn btn01 type01">거절</a>
+                            <a href="javascript:;" class="btn btn01 type02">승인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layerPopupWrap" id="popup2">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="popup">
+                <strong class="popup_title">계정 승인<button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                <div class="popup_body">
+                    <div class="in_popup_input_table">
+                        <table class="input_table">
+                            <tr>
+                                <th>승인 상태</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="승인" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>코멘트</th>
+                                <td>
+                                    <div class="input_textarea">
+                                        <textarea name="" id="" cols="30" rows="10" readonly>관리자 확인 후 승인하였습니다.</textarea>
+                                        <div class="byte">
+                                            0 / 2,000 Bytes
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인 일자</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="2023-08-22" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인자 ID</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="lge1" readonly></div></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn_container4">
+                            <a href="javascript:;" class="btn btn01 type02" onclick="popupclose(this);">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layerPopupWrap" id="popup3">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="popup">
+                <strong class="popup_title">계정 삭제<button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                <div class="popup_body">
+                    <div class="in_popup_input_table">
+                        <table class="input_table">
+                            <colgroup>
+                                <col style="width:154px;">
+                            </colgroup>
+                            <tr>
+                                <th>상호명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="런드리고" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="홍길동" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이디</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="user222" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대전화</th>
+                                <td>
+                                    <div class="inputWrap type_phone">
+                                        <div class="input_text"><input type="text" name="" id="" value="010" readonly></div>
+                                        <div class="input_text"><input type="text" name="" id="" value="5341" readonly></div>
+                                        <div class="input_text"><input type="text" name="" id="" value="4481" readonly></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="222@abc.com" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>코멘트</th>
+                                <td>
+                                    <div class="input_textarea">
+                                        <textarea name="" id="" cols="30" rows="10">계약 해지 처리</textarea>
+                                        <div class="byte">
+                                            0 / 2,000 Bytes
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn_container4">
+                            <a href="javascript:;" class="btn btn01 type03" onclick="popupclose(this);">취소</a>
+                            <a href="javascript:;" class="btn btn01 type02">삭제</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layerPopupWrap" id="popup4">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="popup">
+                <strong class="popup_title">계정 등록<button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                <div class="popup_body">
+                    <div class="in_popup_input_table">
+                        <table class="input_table">
+                            <colgroup>
+                                <col style="width:154px;">
+                            </colgroup>
+                            <tr>
+                                <th>부서명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id=""></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id=""></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이디</th>
+                                <td>
+                                    <div class="inputWrap">
+                                        <div class="input_text"><input type="text" name="" id=""></div>
+                                        <button type="button" class="btn btn04 type01">중복 확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대전화</th>
+                                <td>
+                                    <div class="inputWrap type_phone">
+                                        <div class="input_text"><input type="text" name="" id=""></div>
+                                        <div class="input_text"><input type="text" name="" id=""></div>
+                                        <div class="input_text"><input type="text" name="" id=""></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="222@abc.com"></div></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn_container4">
+                            <a href="javascript:;" class="btn btn01 type03" onclick="popupclose(this);">취소</a>
+                            <a href="javascript:;" class="btn btn01 type02">저장</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layerPopupWrap" id="popup5">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="popup">
+                <strong class="popup_title">계정 삭제<button type="button" class="popup_close" onclick="popupclose(this);">닫기</button></strong>
+                <div class="popup_body">
+                    <div class="in_popup_input_table">
+                        <table class="input_table">
+                            <colgroup>
+                                <col style="width:154px;">
+                            </colgroup>
+                            <tr>
+                                <th>부서명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="서비스운영팀" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자명</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이디</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대전화</th>
+                                <td>
+                                    <div class="inputWrap type_phone">
+                                        <div class="input_text"><input type="text" name="" id="" value="010" readonly></div>
+                                        <div class="input_text"><input type="text" name="" id="" value="1234" readonly></div>
+                                        <div class="input_text"><input type="text" name="" id="" value="5678" readonly></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" value="222@abc.com" readonly></div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>코멘트</th>
+                                <td>
+                                    <div class="input_textarea">
+                                        <textarea name="" id="" cols="30" rows="10">부서 이동 발령</textarea>
+                                        <div class="byte">
+                                            0 / 2,000 Bytes
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn_container4">
+                            <a href="javascript:;" class="btn btn01 type03" onclick="popupclose(this);">취소</a>
+                            <a href="javascript:;" class="btn btn01 type02">삭제</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+    
+    <script src="../../assets/js/ui.js"></script>
+</body>
+</html>

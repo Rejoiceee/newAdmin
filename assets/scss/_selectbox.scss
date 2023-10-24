@@ -1,0 +1,323 @@
+.selectbox {
+    background:$color-white;
+    &.type01 {
+        position: relative;
+        min-width:100px;
+        width:100%;
+        height: 48px;
+        border-radius: 8px;
+        cursor: pointer;
+        .label {
+            position:relative;
+            display: flex;
+            align-items: center;
+            width: inherit;
+            height: inherit;
+            border: 1px solid $color-border;
+            padding-left: 15px;
+            border-radius:8px;
+            font-size:$font-medium;
+            cursor: pointer;
+            &:after {
+                position:absolute;
+                right:16px;
+                top:13px;
+                content:'';
+                display:block;
+                width:16px;
+                height:16px;
+                background: url('../img/arr_selectbox.svg') 50% 50% no-repeat;
+            }
+        }
+        .optionList {
+            position: absolute; 
+            top: 46px;
+            left: 0;
+            z-index:1;
+            display:none;
+            width:100%;
+            border-radius:0 0 8px 8px;
+            background: $color-white;
+            color: $color-gray-3;
+            overflow: hidden;
+            .optionItem {
+                padding: 9px 16px;
+                border-left:1px solid $color-border;
+                border-right:1px solid $color-border;
+                &:hover {
+                    background:#eee;
+                }
+                &:first-child {
+                    border-top:1px solid $color-border;
+                }
+                &:last-child {
+                    border-radius:0 0 8px 8px;
+                    border-bottom:1px solid $color-border;
+                }
+            }
+        }
+        &.active {
+            z-index:2;
+            .label {
+                border-color:$color-default;
+                border-radius:8px 8px 0 0;
+                &:after {
+                    top:17px;
+                    transform:rotate(180deg)
+                }
+            }
+            .optionList {
+                display:block;
+                .optionItem {
+                    border-color:$color-default;
+                    &:hover {
+                        color:$color-default;
+                    }
+                }
+            }
+        }
+    }
+    &.type02 {
+        position: relative;
+        width:170px;
+        height: 36px;
+        border-radius: 8px;
+        cursor: pointer;
+        .ico {
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:1;
+            width:36px;
+            height:36px;
+            &.ico_user {
+                background:url('../img/ico_user.svg') no-repeat 0 0 / 36px;
+            }
+        }
+        .label {
+            position:relative;
+            width:100%;
+            height:36px;
+            padding:0 44px 0 56px;
+            border-radius:18px;
+            background:#efefef;
+            text-align:left;
+            font-size:$font-small;
+            &:after {
+                position:absolute;
+                right:12px;
+                top:6px;
+                content:'';
+                display:block;
+                width:24px;
+                height:24px;
+                background:url('../img/arr_selectbox2.svg') no-repeat;
+            }
+        }
+        .optionList {
+            position:absolute;
+            left:0;
+            top:36px;
+            z-index:1;
+            display:none;
+            width:100%;
+            padding:0 12px 0 16px;
+            border-radius:0 0 8px 8px;
+            background: #efefef;
+            overflow: hidden;
+            .optionItem {
+                padding:10px 0;
+                line-height:1;
+                font-size:$font-small;
+            }
+        }
+        &.active {
+            .label {
+                border-radius:18px 18px 0 0;
+            }
+            .optionList {
+                display:block;
+            }
+        }
+    }
+    &.type03 {
+        position: relative;
+        width:150px;
+        height: 32px;
+        border-radius: 16px;
+        cursor: pointer;
+        .label {
+            position:relative;
+            width:100%;
+            height:32px;
+            padding:0 34px 0 12px;
+            border-radius:16px;
+            background:#efefef;
+            text-align:left;
+            font-size:$font-small;
+            &:after {
+                position:absolute;
+                right:12px;
+                top:13px;
+                content:'';
+                display:block;
+                width:10px;
+                height:6px;
+                background:url('../img/arr_selectbox3.svg') no-repeat;
+            }
+        }
+        .optionList {
+            position:absolute;
+            left:0;
+            top:32px;
+            z-index:1;
+            display:none;
+            width:100%;
+            padding:0 12px;
+            border-radius:0 0 16px 16px;
+            background: #efefef;
+            overflow: hidden;
+            .optionItem {
+                padding:8px 0;
+                line-height:1;
+                font-size:$font-small;
+            }
+        }
+        &.active {
+            .label {
+                border-radius:16px 16px 0 0;
+            }
+            .optionList {
+                display:block;
+            }
+        }
+    }
+    &.type04 {
+        position: relative;
+        width:100%;
+        height: 32px;
+        border-radius: 8px;
+        cursor: pointer;
+        .label {
+            position:relative;
+            width:100%;
+            height:32px;
+            padding:0 34px 0 12px;
+            border-radius:12px;
+            border:1px solid #555;
+            background:$color-white;
+            text-align:left;
+            font-size:$font-small;
+            @include textEllipsis;
+            &:after {
+                position:absolute;
+                right:12px;
+                top:4px;
+                content:'';
+                display:block;
+                width:24px;
+                height:24px;
+                background:url('../img/arr_selectbox2.svg') no-repeat;
+            }
+        }
+        .optionList {
+            position:absolute;
+            left:0;
+            top:32px;
+            z-index:1;
+            display:none;
+            width:100%;
+            border-radius:0 0 8px 8px;
+            background: $color-white;
+            overflow: hidden;
+            .optionItem {
+                padding:8px 12px;
+                border-left:1px solid #555;
+                border-right:1px solid #555;
+                line-height:1;
+                font-size:$font-small;
+                &:last-child {
+                    border-radius:0 0 8px 8px;
+                    border-bottom:1px solid #555;
+                }
+            }
+        }
+        &.active {
+            .label {
+                border-radius:16px 16px 0 0;
+            }
+            .optionList {
+                display:block;
+            }
+        }
+    }
+    &.type05 {
+        position: relative;
+        width:100%;
+        border-radius: 8px;
+        cursor: pointer;
+        .label {
+            position:relative;
+            width:100%;
+            height:26px;
+            padding:0 34px 0 12px;
+            border-radius:6px;
+            border:1px solid #ddd;
+            background:$color-white;
+            text-align:left;
+            font-size:$font-small;
+            @include textEllipsis;
+            &:after {
+                position:absolute;
+                right:12px;
+                top:9px;
+                content:'';
+                display:block;
+                width:10px;
+                height:6px;
+                background:url('../img/arr_selectbox3.svg') no-repeat;
+            }
+        }
+        .optionList {
+            position:absolute;
+            left:0;
+            top:26px;
+            z-index:1;
+            display:none;
+            width:100%;
+            border-radius:0 0 8px 8px;
+            background: $color-white;
+            overflow: hidden;
+            .optionItem {
+                padding:8px 12px;
+                border-left:1px solid #ddd;
+                border-right:1px solid #ddd;
+                line-height:1;
+                font-size:$font-small;
+                &:last-child {
+                    border-radius:0 0 8px 8px;
+                    border-bottom:1px solid #ddd;
+                }
+            }
+        }
+        &.active {
+            .label {
+                border-radius:6px 6px 0 0;
+            }
+            .optionList {
+                display:block;
+            }
+        }
+    }
+}
+
+.input_wrap {
+    display:flex;
+    align-items: center;
+    .input_check, .input_radio {
+        margin-right:20px;
+        &:last-child {
+            margin-right:0;
+        }
+    }
+}

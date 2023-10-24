@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제휴사 Admin</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="wrap" class="has-no-header registerWrap">
+        <div id="container">
+            <div class="registerContainer">
+                <h2 class="pageTitle2">로그인</h2>
+                <div class="register_input">
+                    <div class="inputWrap"><div class="input_text"><input type="text" name="" id="" placeholder="아이디를 입력해 주세요."></div></div>
+                    <div class="inputWrap"><div class="input_text"><input type="password" name="" id="" placeholder="비밀번호를 입력해 주세요."></div></div>
+                </div>
+                <div class="btn_container">
+                    <a href="javascript:;" class="btn btn01 type01">로그인</a>
+                </div>
+                <div class="register_link">
+                    <a href="javascript:;" class="btn_txt04">회원가입</a>
+                    <a href="javascript:;" class="btn_txt04">아이디 / 비밀번호 찾기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="register_footer">
+            <span class="copyright">제휴사 Admin</span>
+        </div>
+    </div>
+
+    <!-- 팝업 확인 (개발 사용 X) -->
+    <div class="checkPopup" style="position:fixed; left:0; bottom:0; z-index:10; padding:20px;;">
+        <button type="button" class="btn btn02 type01" onclick="popup('alert1');">세션만료</button>
+        <button type="button" class="btn btn02 type01" onclick="popup('alert2');">승인확인</button>
+    </div>
+    <!-- //팝업 확인 (개발 사용 X) -->
+
+    <!-- 팝업 -->
+    <div class="layerPopupWrap" id="alert1">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="alert">
+                <div class="alert_body">오랜 시간 동안 활동 없어 세션이 만료되었습니다. <br>다시 로그인하십시오.</div>
+                <div class="btn_container">
+                    <button type="button" class="btn btn01 type02" onclick="popupclose(this);">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layerPopupWrap" id="alert2">
+        <div class="dimmed"></div>
+        <div class="layerPopup">
+            <div class="alert">
+                <div class="alert_body">관리자 승인 후 사용 가능 합니다.</div>
+                <div class="btn_container">
+                    <button type="button" class="btn btn01 type02" onclick="popupclose(this);">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+    
+    <script src="../../assets/js/ui.js"></script>
+</body>
+</html>

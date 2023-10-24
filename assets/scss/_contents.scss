@@ -1,0 +1,375 @@
+.select_date {
+    display:flex;
+    .period {
+        display:flex;
+        width:336px;
+        margin-right:20px;
+        border-radius:8px;
+        .btn {
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            width:84px;
+            height:48px;
+            border-top:1px solid $color-border;
+            border-bottom:1px solid $color-border;
+            border-left:1px solid $color-border;
+        }
+        li:first-child {
+            .btn {
+                border-radius:8px 0 0 8px;
+            }
+        }
+        li:last-child {
+            .btn {
+                border-right:1px solid $color-border;
+                border-radius:0 8px 8px 0;
+            }
+        }
+        li {
+            &.on {
+                .btn {
+                    border-color:$color-primary;
+                    color:$color-primary;
+                }
+                & + li {
+                    .btn {
+                        border-left-color:$color-primary;
+                    }
+                }
+            }
+        }
+    }
+    .date {
+        display:flex;
+        align-items: center;
+        .input_text {
+            width:120px;
+        }
+        .datepick {
+            width:28px;
+            height:28px;
+            margin-left:8px;
+            background:url('../img/ico_calendar.svg') no-repeat;
+        }
+        .dash {
+            display:inline-block;
+            margin:0 10px;
+        }
+    }
+    .input_wrap {
+        margin-left:40px;
+    }
+}
+
+// Title
+.pageTitle {
+    margin-top:24px;
+    font-size:$font-large-2;
+}
+.pageTitle2 {
+    text-align:center;
+    font-size:$font-large-2;
+}
+.sectionTitle {
+    margin-top:60px;
+    font-size:$font-large-1;
+}
+
+//input table
+.input_table {
+    tbody {
+        th {
+            padding-top:18px;
+            vertical-align:top;
+            text-align:left;
+        }
+        td {
+            padding:5px 0;
+        }
+    }
+}
+
+/* 로그인 */
+.registerWrap {
+    background:#f9f9fa;
+}
+.registerContainer {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width:360px;
+    height:calc(100vh - 140px);
+    margin:0 auto;
+    &.type02 {
+        display:block;
+        max-width:1280px;
+        width:100%;
+        height:auto;
+        min-height:100vh;
+        padding-bottom:60px;
+        background:$color-white;
+        .register_contents {
+            display:block;
+            width:720px;
+            margin:0 auto;
+            .pageTitle {
+                text-align:center;
+            }
+        }
+    }
+    .register_link {
+        display:flex;
+        margin-top:24px;
+        justify-content: space-between;
+        &.single {
+            display:block;
+            text-align:right;
+        }
+    }
+    .progress {
+        display:flex;
+        justify-content:space-between;
+        margin-top:36px;
+        li {
+            position:relative;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:216px;
+            height:48px;
+            border-radius:24px;
+            line-height:1;
+            background:#efefef;
+            color:$color-default;
+            &:nth-child(1):before {
+                content:'01.';
+                margin-right:5px;
+            }
+            &:nth-child(2):before {
+                content:'02.';
+                margin-right:5px;
+            }
+            &:nth-child(3):before {
+                content:'03.';
+                margin-right:5px;
+            }
+            &:after {
+                position:absolute;
+                right:-28px;
+                top:13px;
+                content:'';
+                display:block;
+                width:20px;
+                height:20px;
+                background:url('../img/arr_right3.svg') no-repeat;
+            }
+            &:last-child:after {
+                display:none;
+            }
+            &.on {
+                background:$color-default;
+                color:$color-white;
+            }
+            &.check {
+                &:before {
+                    content:'';
+                    display:block;
+                    width:16px;
+                    height:16px;
+                    background:url('../img/ico_check.svg') no-repeat;
+                }
+            }
+        }
+    }
+    .pageSummary {
+        display:flex;
+        justify-content: space-between;
+        margin-top:60px;
+        & + .termsWrap {
+            margin-top:36px;
+        }
+    }
+    .termsWrap {
+        .title {
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            margin-bottom:10px;
+            line-height:1;
+        }
+        & + .termsWrap {
+            margin-top:27px;
+        }
+        .termsContents {
+            overflow-x:hidden;
+            overflow-y:auto;
+            height:104px;
+            padding:16px;
+            border:1px solid $color-border;
+            border-radius:8px;
+            font-size:$font-small;
+        }
+    }
+}
+.register_input {
+    margin-top:60px;
+}
+.register_input2 {
+    margin-top:36px;
+}
+.register_input3 {
+    margin-top:16px;
+}
+
+.register_header {
+    display:flex;
+    align-items:center;
+    padding-left:60px;
+    height:80px;
+    border-bottom:1px solid $color-border;
+    .copyright {
+        display:inline-block;
+        min-height:24px;
+        line-height:24px;
+        padding-left:32px;
+        background:url('../img/logo.svg') no-repeat 0 50% / 24px;
+        font-weight:$font-weight-bold;
+        color:$color-default;
+    }
+}
+.register_footer {
+    display:flex;
+    height:140px;
+    align-items:center;
+    justify-content:center;
+    .copyright {
+        display:inline-block;
+        min-height:24px;
+        line-height:24px;
+        padding-left:32px;
+        background:url('../img/logo.svg') no-repeat 0 50% / 24px;
+        font-weight:$font-weight-bold;
+        color:#767676;
+    }
+}
+/* //로그인 */
+
+/* 권한관리 */
+.searchOptionArea {
+    display:flex;
+    align-items:center;
+    padding:25px 20px;
+    background:#efefef;
+    .innerBox {
+        display:flex;
+        align-items:center;
+        & + .innerBox {
+            margin-left:65px;
+        }
+    }
+    .title {
+        margin-right:16px;
+        font-weight:$font-weight-regular;
+        white-space:noWrap;
+    }
+    .status {
+        flex:1;
+    }
+    .option_detail {
+        flex:auto;
+        .inputWrap {
+            width:100%;
+        }
+        .btn {
+            width:80px;
+        }
+    }
+}
+
+.table_header {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top:36px;
+    .box_left {
+        display:flex;
+        align-items:center;
+        .total_count {
+            span {
+                color:$color-pink;
+            }
+        }
+        .selectbox {
+            width:72px;
+            margin-left:16px;
+        }
+    }
+    .box_right {
+        .btn {
+            width:80px;
+        }
+    }
+}
+.dataTable01 {
+    margin-top:22px;
+    thead {
+        tr:first-child {
+            th {
+                border-top:2px solid $color-default;
+            }
+        }
+        th {
+            border-top:1px solid #ccc;
+            padding:12px 0 16px;
+            &.bdl {
+                border-left:1px solid #ccc;
+            }
+            
+        }
+        & + tbody {
+            tr:first-child {
+                td {
+                    border-top:1px solid #ccc;
+                }
+            }
+        }
+    }
+    tbody {
+        td {
+            text-align:center;
+            vertical-align:middle;
+            padding:8px 0;
+            border-bottom:1px solid #ccc;
+            &.bdl {
+                border-left:1px solid #ccc;
+            }
+        }
+        tr {
+            &:first-child {
+                td {
+                    border-top:2px solid $color-default;
+                }
+            }
+        }
+    }
+    &.type02 {
+        width:100%;
+        overflow-y:hidden;
+        overflow-x:auto;
+        table {
+            min-width:120%;
+            max-width:10000px;
+        }
+    }
+}
+.table_footer {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top:16px;
+}
+
+.in_popup_input_table {
+    width:554px;
+}

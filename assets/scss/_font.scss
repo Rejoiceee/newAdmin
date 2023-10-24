@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* Pretendard */
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 400;
+	src: local('☺'),
+		url('../font/Pretendard/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 500;
+	src: local('☺'),
+		url('../font/Pretendard/Pretendard-Medium.woff2') format('woff2');
+}
+
+
+@font-face {
+	font-family: 'Pretendard';
+	font-style: normal;
+	font-weight: 700;
+	src: local('☺'),
+		url('../font/Pretendard/Pretendard-Bold.woff2') format('woff2');
+}
+
+/* Noto Sans KR */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: local('☺'),
+		url('../font/NotoSansKR/NotoSansKR-Regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: local('☺'),
+		url('../font/NotoSansKR/NotoSansKR-Bold.woff2') format('woff2');
+}
+

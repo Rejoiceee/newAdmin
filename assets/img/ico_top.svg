@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18">
+  <g id="arrow-up" transform="translate(-75.916)">
+    <g id="arrowstop-1-n_1_" transform="translate(75.916 0)">
+      <path id="패스_606" data-name="패스 606" d="M102.816,100.046a1,1,0,0,1-.71-.3L97.155,94.8,92.2,99.746a1,1,0,0,1-1.41-1.358l5.651-5.65a1,1,0,0,1,1.414-.006l.006.006,5.651,5.65a.955.955,0,0,1-.7,1.657Z" transform="translate(-90.155 -89.663)" fill="#fff"/>
+      <path id="패스_607" data-name="패스 607" d="M259.114,105.381a.95.95,0,0,1-1-.893v-12.5a1,1,0,0,1,2,0v12.5A.95.95,0,0,1,259.114,105.381Z" transform="translate(-252.114 -87.381)" fill="#fff"/>
+      <path id="패스_608" data-name="패스 608" d="M88.916,2h-12a1,1,0,1,1,0-2h12a1,1,0,1,1,0,2Z" transform="translate(-75.916 0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
